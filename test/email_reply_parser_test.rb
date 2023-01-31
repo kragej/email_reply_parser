@@ -196,6 +196,11 @@ I am currently using the Java HTTP API.\n", reply.fragments[0].to_s
     assert_equal 'This is text from gmail set up with danish locale', EmailReplyParser.parse_reply(body)
   end
 
+  def test_danish_gmail_client_2
+    body = IO.read EMAIL_FIXTURE_PATH.join("gmail_danish_2.txt").to_s
+    assert_equal 'This is text from gmail set up with danish locale', EmailReplyParser.parse_reply(body)
+  end
+
   def test_parse_reply
     body = IO.read EMAIL_FIXTURE_PATH.join("email_1_2.txt").to_s
     assert_equal EmailReplyParser.read(body).visible_text, EmailReplyParser.parse_reply(body)
