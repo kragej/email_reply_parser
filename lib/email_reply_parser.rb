@@ -146,7 +146,8 @@ class EmailReplyParser
 
       # Gmail in Danish
       /^\d{1,2}.*kl\..*skrev.*:$/,
-      /^Den (man|tir|ons|tor|fre|lør|søn)\. \d{1,2}.*kl\..*skrev.*$/
+      /^Den (man|tir|ons|tor|fre|lør|søn)\. \d{1,2}.*kl\..*skrev.*$/,
+      /^(Emne|Til|Sendt|Fra):.*$/
     ]
 
     ### Line-by-Line Parsing
